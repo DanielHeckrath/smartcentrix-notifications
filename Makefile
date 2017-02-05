@@ -1,7 +1,7 @@
 PROJECT=notification-service
 ORGANIZATION=smartcentrix
 DOCKER_REPO = $(ORGANIZATION)/$(PROJECT)
-VERSION_TAG = 0.0.2
+VERSION_TAG = $(shell git describe --dirty)
 
 GO_SOURCE := $(shell find . -name '*.go')
 GOOS := linux
