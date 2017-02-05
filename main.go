@@ -19,7 +19,7 @@ func main() {
 
 	// Transport: grpc
 	go func() {
-		ln, err := net.Listen("tcp", "localhost:8081")
+		ln, err := net.Listen("tcp", ":8081")
 		if err != nil {
 			errc <- err
 		}
